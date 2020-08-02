@@ -1,0 +1,263 @@
+:root {
+  --primary-color: #c21858;
+  --primaryDark-color: rgb(156, 10, 59);
+  --secondary-color: #ffc107;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Poppins', sans-serif;
+}
+html {
+  font-size: 62.5%; /*Reset para REMS - 62.5 = 10px de 16px*/
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+}
+
+/* ====================== GLOBALES =============== */
+img {
+  max-width: 100%;
+}
+h1,
+h2 {
+  font-family: var(--secondary-font);
+  text-align: center;
+  margin: 0;
+}
+h1 {
+  padding: 2rem;
+  color: white;
+}
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.contenedor {
+  max-width: 110rem;
+  margin: 0 auto;
+  width: 95%;
+}
+form {
+  padding: 3rem;
+  margin-top: 2rem;
+}
+form legend {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+form legend span {
+  display: block;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+/* =============================================== */
+
+/* ====================== FORMULARIO AGREGAR CONTACTO ====== */
+.contenedor-barra {
+  background-color: var(--primaryDark-color);
+}
+.campo {
+  padding: 0.5rem 0;
+}
+.campo label {
+  font-weight: bold;
+}
+.campo input:not([type='submit']) {
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  height: 3.5rem;
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .campos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .campo {
+    flex-basis: calc(33.3% - 2rem);
+  }
+}
+/* =============================================== */
+
+/* ====================== LISTA DE CONTACTOS =============== */
+.contactos {
+  padding: 2rem;
+  margin-top: 3rem;
+}
+.contenedor-contactos {
+  max-width: 80rem;
+  margin: 4rem auto 0 auto;
+}
+.buscador {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #e1e1e1;
+  margin: 2rem 0;
+}
+.buscador.sombra {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.total-contactos {
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+}
+.total-contactos span {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.contenedor-tabla {
+  overflow-x: scroll;
+}
+.listado-contactos {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+.listado-contactos thead {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.listado-contactos thead th {
+  padding: 1rem 0;
+}
+.listado-contactos tbody td {
+  padding: 0.5rem;
+}
+.listado-contactos tbody td:last-of-type {
+  text-align: center;
+}
+/* =============================================== */
+
+/* ====================== PAGINA EDITAR CONTACTO =============== */
+.barra {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  align-items: center;
+}
+/* =============================================== */
+
+/* ====================== UTILIDADES =============== */
+.bg-amarillo {
+  background-color: var(--secondary-color);
+}
+.bg-blanco {
+  background-color: white;
+}
+.sombra {
+  -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.69);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.69);
+  border-radius: 1rem;
+}
+
+/* Alinear contenido */
+.justify-rigth {
+  text-align: right;
+}
+.justify-center {
+  text-align: center;
+}
+.justify-left {
+  text-align: left;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  font-family: var(--second-font);
+  text-align: center;
+  padding: 1rem 4rem;
+  flex: 0 0 100%;
+  width: 100%;
+  color: white;
+  margin: 0.7rem 0;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  border: none;
+}
+.btn:hover {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
+  }
+}
+.btn-primario {
+  background-color: var(--primary-color);
+}
+.btn-primario:hover {
+  background-color: var(--primaryDark-color);
+}
+.btn-volver {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  color: black;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+/* Botones de icono */
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+.btn-icon i:hover {
+  cursor: pointer;
+}
+.btn-icon i {
+  font-size: 2rem;
+}
+.btn-editar {
+  color: var(--secondary-color);
+}
+.btn-borrar {
+  color: var(--primary-color);
+}
+
+/* Notificaiones */
+.notificacion {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem 3rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.visible {
+  opacity: 1;
+}
+/* colores de notificacion */
+.exito {
+  background-color: rgb(179, 241, 117);
+  color: green;
+}
+.error {
+  background-color: rgb(238, 148, 166);
+  color: rgb(163, 0, 33);
+}
+/* =============================================== */
